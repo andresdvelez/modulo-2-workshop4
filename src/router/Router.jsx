@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import HomeScreen from '../components/Screens/HomeScreen';
+import HomeScreen from '../Screens/HomeScreen';
 import CrewSection from '../sections/CrewSection/CrewSection';
 import DestinationSection from '../sections/DestinationSection/DestinationSection';
 import HeroSection from '../sections/HeroSection/HeroSection';
@@ -11,12 +11,6 @@ import { getData } from '../services/getData.js';
 getData('destinations').then((res) => {
     console.log(res);
 });
-
-import HomeScreen from '../components/Screens/HomeScreen';
-import CrewSection from '../sections/CrewSection/CrewSection';
-import DestinationSection from '../sections/DestinationSection/DestinationSection';
-import HeroSection from '../sections/HeroSection/HeroSection';
-import TecnologySection from '../sections/TegnologySection/TecnologySection';
 
 const Router = () => {
     return (
