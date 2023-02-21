@@ -12,7 +12,11 @@ getData('destinations').then((res) => {
     console.log(res);
 });
 
-console.log(getData);
+import HomeScreen from '../components/Screens/HomeScreen';
+import CrewSection from '../sections/CrewSection/CrewSection';
+import DestinationSection from '../sections/DestinationSection/DestinationSection';
+import HeroSection from '../sections/HeroSection/HeroSection';
+import TecnologySection from '../sections/TegnologySection/TecnologySection';
 
 const Router = () => {
     return (
