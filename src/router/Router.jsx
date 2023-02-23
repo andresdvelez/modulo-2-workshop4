@@ -6,6 +6,7 @@ import CrewSection from "../sections/CrewSection/CrewSection";
 import DestinationSection from "../sections/DestinationSection/DestinationSection";
 import HeroSection from "../sections/HeroSection/HeroSection";
 import TecnologySection from "../sections/TegnologySection/TecnologySection";
+import { getData } from "../services/getData.js";
 
 const Router = () => {
   return (
@@ -15,7 +16,7 @@ const Router = () => {
           <Route path="/" element={<HeroSection />} />
           <Route path="/destination" element={<DestinationSection />} />
           <Route path="/crew" element={<CrewSection />} />
-          <Route path="/tecnology" element={<TecnologySection />} />
+          <Route path="/technology" element={<TecnologySection />} />
         </Route>
       </Routes>
     </BrowserRouter>
