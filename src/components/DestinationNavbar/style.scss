@@ -1,0 +1,181 @@
+@use 'src/constants/variables' as v;
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.destination__container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 472px;
+    color: beige;
+    margin-top: 150px;
+    justify-content: space-between;
+    .destination_image {
+        overflow: hidden;
+        img {
+            -webkit-animation: 20s rotate linear infinite;
+            animation: 20s rotate linear infinite;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            height: 445px;
+            width: 445px;
+        }
+    }
+    .description__container {
+        gap: 20px;
+        width: 445px;
+        height: 472px;
+        display: flex;
+        flex-direction: column;
+        .nav__planets {
+            width: 100%;
+            height: 34px;
+            display: flex;
+            justify-content: space-between;
+            button {
+                cursor: pointer;
+                transition: 0.3s;
+                font-family: v.$fontBarlow;
+                background-color: transparent;
+                border: none;
+                color: #fff;
+                font-size: 22px;
+                color: v.$lightBlue;
+            }
+
+            button:hover {
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+            button:focus {
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+        }
+        .description__title {
+            text-transform: uppercase;
+            font-family: v.$fontBellefair;
+            font-size: 120px;
+        }
+        .description__planet {
+            height: 150px;
+            border-bottom: 1px solid #383b4b;
+            text-align: justify;
+            color: v.$lightBlue;
+            font-family: v.$fontBarlow;
+            font-size: 20px;
+        }
+        .description__disandtravel {
+            text-align: flex-start;
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            .description__distance {
+                gap: 10px;
+                width: 143px;
+                display: flex;
+                flex-direction: column;
+                height: 61px;
+                span {
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    color: v.$lightBlue;
+                    font-family: v.$fontBarlow;
+                }
+                p {
+                    font-size: 28px;
+                    color: #fff;
+                    font-family: v.$fontBellefair;
+                }
+            }
+            .description__travel {
+                gap: 10px;
+                width: 143px;
+                display: flex;
+                flex-direction: column;
+                height: 61px;
+                span {
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    color: v.$lightBlue;
+                    font-family: v.$fontBarlow;
+                }
+                p {
+                    font-size: 28px;
+                    color: #fff;
+                    font-family: v.$fontBellefair;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .destination__container {
+        gap: 20px;
+        text-align: center;
+        flex-direction: column;
+        height: 100%;
+        .destination_image {
+            img {
+                height: 300px;
+                width: 300px;
+            }
+        }
+        .description__container {
+            width: 90%;
+            .description__title {
+                font-size: 100px;
+            }
+            .description__planet {
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .destination__container {
+        .destination_image {
+            img {
+                height: 300px;
+                width: 300px;
+            }
+        }
+        .description__container {
+            width: 90%;
+            .description__title {
+                font-size: 60px;
+            }
+            .description__planet {
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+            .description__disandtravel {
+                align-items: center;
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,86 +1,87 @@
-@use "../../constants/variables" as variables;
+@use '../../constants/variables' as variables;
 
 .navbar {
-  background-color: transparent;
-  position: absolute;
-  right: 0;
-  top: 40px;
-
-  display: flex;
-  align-items: center;
-
-  &__left {
+    z-index: 999;
+    background-color: transparent;
     position: absolute;
-    left: -34vw;
+    right: 0;
+    top: 40px;
+
     display: flex;
     align-items: center;
-    &-logo {
-      margin-right: 50px;
-      height: 48px;
 
-      & > img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-    }
-    &-bar {
-      background-color: rgba(255, 255, 255, 0.25);
-      height: 1px;
-      width: 430px;
-      z-index: 99;
-      //   position: absolute;
-      //   left: 167px;
-      //   top: 58px;
-    }
-  }
-
-  &__right {
-    display: flex;
-    gap: 70px;
-    padding: 40px 160px;
-    height: 100%;
-
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.4px);
-    -webkit-backdrop-filter: blur(8.4px);
-
-    &-link > a {
-      color: variables.$white;
-      font-family: variables.$fontBarlow;
-      font-weight: 500;
-      letter-spacing: 2.7px;
-      position: relative;
-
-      display: flex;
-      gap: 1rem;
-
-      &::after {
-        background-color: rgba(255, 255, 255, 0.5);
-        content: "";
-        display: inline-block;
+    &__left {
         position: absolute;
-        left: 0;
-        top: calc(100% + 37px);
-        height: 3px;
-        width: 90%;
-        opacity: 0;
-        transition: 250ms ease;
+        left: -34vw;
+        display: flex;
+        align-items: center;
+        &-logo {
+            margin-right: 50px;
+            height: 48px;
 
-        transform: translateX(5px);
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
-
-      &.active {
-        &::after {
-            background-color: #fff;
-            opacity: 1;
+            & > img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
         }
-      }
+        &-bar {
+            background-color: rgba(255, 255, 255, 0.25);
+            height: 1px;
+            width: 430px;
+            z-index: 99;
+            //   position: absolute;
+            //   left: 167px;
+            //   top: 58px;
+        }
     }
-  }
+
+    &__right {
+        display: flex;
+        gap: 70px;
+        padding: 40px 160px;
+        height: 100%;
+
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8.4px);
+        -webkit-backdrop-filter: blur(8.4px);
+
+        &-link > a {
+            color: variables.$white;
+            font-family: variables.$fontBarlow;
+            font-weight: 500;
+            letter-spacing: 2.7px;
+            position: relative;
+
+            display: flex;
+            gap: 1rem;
+
+            &::after {
+                background-color: rgba(255, 255, 255, 0.5);
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: calc(100% + 37px);
+                height: 3px;
+                width: 90%;
+                opacity: 0;
+                transition: 250ms ease;
+
+                transform: translateX(5px);
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
+            &.active {
+                &::after {
+                    background-color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
