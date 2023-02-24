@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { getData } from '../../services/getData';
 import './style.scss';
 
@@ -16,12 +16,29 @@ const DestinationNavbar = () => {
     const [currentDistance, setcurrentDistance] = useState('384,400 km');
     const [currentTravel, setcurrentTravel] = useState('3 days');
 
+    // const [reveal, setReveal] = useState(false);
+    // const imageRef = useRef(null);
+    // const titleRef = useRef(null);
+    // const descriptionRef = useRef(null);
+    // const travelRef = useRef(null);
+    // const distanceRef = useRef(null);
+
+    // const revalF = () => {
+    //     if (reveal == false) {
+    //         setReveal(true);
+    //     } else setReveal(false);
+    // };
+
     const handleClick = (image, title, description, distance, travel) => {
         setCurrentImage(image);
         setcurrentTitle(title);
         setcurrentDescription(description);
         setcurrentTravel(travel);
         setcurrentDistance(distance);
+        // titleRef.current.classList.remove('reveal');
+        // titleRef.current.classList.add('reveal');
+        // console.log(titleRef.current);
+        // revalF();
     };
 
     useEffect(() => {
@@ -94,19 +111,25 @@ const DestinationNavbar = () => {
                             Titan
                         </button>
                     </nav>
-                    <span className="description__title">{`${currentTitle}`}</span>
+                    <span
+                        className="description__title"
+                        /* ref={titleRef} */
+                    >{`${currentTitle}`}</span>
 
-                    <p className="description__planet">
+                    <p
+                        className="description__planet" /*  ref={descriptionRef} */
+                    >
                         {`${currentDescription}`}
                     </p>
                     <div className="description__disandtravel">
                         <div className="description__distance">
                             <span>AVG.DISTANCE</span>
-                            <p>{`${currentDistance}`}</p>
+                            <p /* ref={distanceRef} */
+                            >{`${currentDistance}`}</p>
                         </div>
                         <div className="description__travel">
                             <span>Est. travel time</span>
-                            <p>{`${currentTravel}`}</p>
+                            <p /* ref={travelRef} */>{`${currentTravel}`}</p>
                         </div>
                     </div>
                 </article>
