@@ -16,29 +16,12 @@ const DestinationNavbar = () => {
   const [currentDistance, setcurrentDistance] = useState("384,400 km");
   const [currentTravel, setcurrentTravel] = useState("3 days");
 
-  // const [reveal, setReveal] = useState(false);
-  // const imageRef = useRef(null);
-  // const titleRef = useRef(null);
-  // const descriptionRef = useRef(null);
-  // const travelRef = useRef(null);
-  // const distanceRef = useRef(null);
-
-  // const revalF = () => {
-  //     if (reveal == false) {
-  //         setReveal(true);
-  //     } else setReveal(false);
-  // };
-
   const handleClick = (image, title, description, distance, travel) => {
     setCurrentImage(image);
     setcurrentTitle(title);
     setcurrentDescription(description);
     setcurrentTravel(travel);
     setcurrentDistance(distance);
-    // titleRef.current.classList.remove('reveal');
-    // titleRef.current.classList.add('reveal');
-    // console.log(titleRef.current);
-    // revalF();
   };
 
   useEffect(() => {
