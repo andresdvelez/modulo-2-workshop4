@@ -47,14 +47,14 @@
     }
     .slick-dots li button:before{
         color: #979797;
-        font-size: 10px;
+        font-size: 8px;
     }
     .slick-dots li.slick-active button:before {
         color: #FFFFFF;
     }
     .slick-dots{
         width: 250px;
-        bottom: 230px;
+        bottom: 200px;
         left: 50px;
     }
     .slick-slider{
@@ -64,7 +64,8 @@
         display: grid;
     }
     .title{
-        font-size: 14px;
+        font-size: 22px;
+        margin-top: 80px;
     }
     
 }

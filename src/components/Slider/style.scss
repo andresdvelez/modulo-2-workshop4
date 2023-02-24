@@ -7,8 +7,6 @@
     width: 100%;
     padding: 0px 20px 0px;
 
-
-    //color: azure;
     & div{
         height: 100%;
     }
@@ -56,10 +54,14 @@
     .containerSlider{
         width: 100%;
         flex-direction: column-reverse;
-        gap: 50px;
+        gap: 90px;
         //color: azure;
         & div{
             height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &__info{
             width: 300px;
@@ -69,19 +71,19 @@
             &__role{
                 //Heading 4 - Bellefair Regular - 32px
                 font-size: 15px;
-                margin-bottom: 0px;
+                margin-bottom: 10px;
             }
             &__name{
                 //Heading 3 - Bellefair Regular - 56px
-                font-size: 12px;
-                margin-bottom: 0px;
+                font-size: 20px;
+                margin-bottom: 10px;
             
                 
             }
             &__bio{
                 height: 100%;
                 width: 290px;
-                font-size: 14px;
+                font-size: 12px;
                 margin-bottom: 0px;
             }
         }
@@ -91,7 +93,9 @@
     }
     .img{
         height: 205px;
-        width: 200px;
+    }
+    .containerSlider__img{
+        border-bottom: 1px solid rgba(255,255,255, 0.1);
     }
 }
 
