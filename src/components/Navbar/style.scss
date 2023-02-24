@@ -88,6 +88,29 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+
+    &__left {
+      &-bar {
+        display: none;
+      }
+    }
+
+    &__right {
+      gap: 37px;
+      padding: 39px 48px;
+
+      &-link > a {
+        & > span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 550px) {
   .navbar {
     right: auto;
