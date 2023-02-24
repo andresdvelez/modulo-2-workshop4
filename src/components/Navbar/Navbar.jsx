@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import Logo from "../../assets/shared/logo.svg";
 import { NavLink } from "react-router-dom";
+
+import burguerIcon from "../../assets/shared/icon-hamburger.svg";
+import SlideMenu from "../slideMenu/SlideMenu";
 
 function Navbar() {
   const links = [
@@ -11,6 +14,12 @@ function Navbar() {
     { name: "Technology", route: "/technology", id: "04" },
   ];
 
+  const [shown, setShown] = useState(false);
+
+  const handleShown = () => {
+    setShown(!shown);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__left">
@@ -19,6 +28,10 @@ function Navbar() {
         </figure>
         <div className="navbar__left-bar"></div>
       </div>
+      <button className={`burguer-menu ${shown && 'isShown'}`} onClick={handleShown}>
+        <img src={burguerIcon} alt="" />
+      </button>
+      <SlideMenu shown={shown} setShown={setShown} links={links} />
       <ul className="navbar__right">
         {links.map((link) => (
           <li className="navbar__right-link" key={link.id}>
