@@ -23,12 +23,9 @@ function TecnologySection() {
     setcurrentTitle(title);
     setcurrentDescription(desc);
 
-    console.log();
-
-    console.log(e.target.classList);
-
     validateBtns(e, firstBtnRef, secondBtnRef, thirdBtnRef);
   };
+
   useEffect(() => {
     try {
       const fetchData = async () => {

@@ -55,7 +55,7 @@
 
     &-btn {
       background-color: v.$DarkBlue;
-      border: 1px solid #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 50%;
       color: #fff;
       font-family: v.$fontBellefair;
@@ -65,6 +65,10 @@
       width: 80px;
 
       transition: 250ms ease;
+
+      &:hover {
+        border-color: #fff;
+      }
 
       &.active {
         background-color: v.$white;
@@ -120,4 +124,57 @@
   font-size: 18px;
   line-height: 32px;
   width: 90%;
+}
+
+@media (max-width: 768px) {
+  .technology {
+    padding-top: 130px;
+    padding-left: 0;
+
+    &__header {
+      padding-left: 38px;
+      margin-bottom: 60px;
+    }
+
+    &__main {
+      flex-direction: column-reverse;
+      gap: 0;
+
+      &-left {
+        flex-direction: column;
+        gap: 0;
+        margin-right: 0;
+      }
+
+      &-btns {
+        flex-direction: row;
+        margin-bottom: 44px;
+      }
+    }
+  }
+
+  .info__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-size: 40px;
+    }
+  }
+
+  .info__main-info {
+    margin-bottom: 56px;
+    height: 310px;
+    width: 100%;
+
+    & > img {
+      background-position: 50% 100%;
+    }
+  }
+
+  .info__body {
+    font-size: 16px;
+    text-align: center;
+  }
 }
