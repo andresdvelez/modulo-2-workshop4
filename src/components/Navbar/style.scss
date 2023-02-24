@@ -31,9 +31,6 @@
       height: 1px;
       width: 430px;
       z-index: 99;
-      //   position: absolute;
-      //   left: 167px;
-      //   top: 58px;
     }
   }
 
@@ -83,6 +80,76 @@
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+.burguer-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+
+    &__left {
+      &-bar {
+        display: none;
+      }
+    }
+
+    &__right {
+      gap: 37px;
+      padding: 39px 48px;
+
+      &-link > a {
+        & > span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    right: auto;
+    top: 0;
+    width: 100%;
+    align-items: inherit;
+
+    justify-content: space-between;
+
+    &__left {
+      align-items: inherit;
+      position: unset;
+      padding: 24px;
+
+      &-bar {
+        display: none;
+      }
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+
+  .isShown {
+    display: none;
+  }
+
+  .burguer-menu {
+    background-color: transparent;
+    display: block;
+    margin-top: 31px;
+    margin-right: 31px;
+    height: 31px;
+    width: 34px;
+
+    & > img {
+      height: 100%;
+      width: 100%;
     }
   }
 }
