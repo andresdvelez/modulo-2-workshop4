@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
 
+  z-index: 999;
+
   &__left {
     position: absolute;
     left: -34vw;
@@ -77,8 +79,8 @@
 
       &.active {
         &::after {
-            background-color: #fff;
-            opacity: 1;
+          background-color: #fff;
+          opacity: 1;
         }
       }
     }
