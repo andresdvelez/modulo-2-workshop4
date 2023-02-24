@@ -3,10 +3,18 @@
 .slide-menu {
   transform: translateX(110vw);
   position: absolute;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .slide-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 550px) {
   .slide-menu {
+    display: block;
     padding: 32px;
     position: fixed;
     right: 0;
