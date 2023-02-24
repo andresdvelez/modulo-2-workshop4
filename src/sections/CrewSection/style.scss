@@ -1,0 +1,71 @@
+@use '../../constants/variables';
+.banner{
+    background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 0px;
+    height: 100vh;
+    color: azure;
+}
+.slick-dots li button:before{
+    color: #979797;
+    font-size: 15px;
+}
+.slick-dots li.slick-active button:before {
+    color: #FFFFFF;
+}
+.slick-dots{
+    width: 250px;
+    bottom: 60px;
+    left: 10px;
+}
+.slick-prev:before, .slick-next:before{
+    display: none;
+}
+.slick-slider{
+    height: 100%;
+    overflow: hidden;
+}
+.title{
+    letter-spacing: 2px;
+    font-family: variables.$fontBarlow;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 80px;
+    margin-top: 150px;
+}
+.number{
+    font-weight: bolder;
+    color: rgba(255,255,255, 0.4);
+}
+@media (max-width: 550px){
+
+    .banner{
+        height: 100vh;
+    }
+    .slick-dots li button:before{
+        color: #979797;
+        font-size: 8px;
+    }
+    .slick-dots li.slick-active button:before {
+        color: #FFFFFF;
+    }
+    .slick-dots{
+        width: 250px;
+        bottom: 200px;
+        left: 50px;
+    }
+    .slick-slider{
+        height: 100%;
+        overflow: hidden;
+        align-items: center;
+        display: grid;
+    }
+    .title{
+        font-size: 22px;
+        margin-top: 80px;
+    }
+    
+}

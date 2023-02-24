@@ -1,0 +1,57 @@
+@use 'src/constants/variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+.destinatons {
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .title__destinations {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        top: 170px;
+        left: 120px;
+        position: absolute;
+        font-weight: 400;
+        font-size: 28px;
+        display: flex;
+        gap: 20px;
+        font-family: v.$fontBarlow;
+        color: white;
+        .number__destitations {
+            font-weight: 700;
+            color: gray;
+        }
+    }
+}
+
+.destinationNavbar {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .destinatons {
+        height: auto;
+        background-image: url(../../assets/destination/background-destination-tablet.jpg);
+        .title__destinations {
+            left: 38.5px;
+        }
+    }
+    .destinationNavbar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 426px) {
+    .destinatons {
+        background-image: url(../../assets/destination/background-destination-mobile.jpg);
+    }
+}

@@ -6,7 +6,7 @@ import CrewSection from "../sections/CrewSection/CrewSection";
 import DestinationSection from "../sections/DestinationSection/DestinationSection";
 import HeroSection from "../sections/HeroSection/HeroSection";
 import TecnologySection from "../sections/TegnologySection/TecnologySection";
-import { getData } from "../services/getData.js";
+// import { getData } from "../services/getData.js";
 
 const Router = () => {
   return (
