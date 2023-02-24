@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import DestinationNavbar from '../../components/DestinationNavbar/DestinationNavbar';
-import './style.scss';
+import React from "react";
+import DestinationNavbar from "../../components/DestinationNavbar/DestinationNavbar";
+import "./style.scss";
 
 function DestinationSection() {
     return (
