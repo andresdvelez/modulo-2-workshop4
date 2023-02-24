@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomeScreen from "../Screens/HomeScreen";
-import CrewSection from "../sections/CrewSection/CrewSection";
+// Sections
 import DestinationSection from "../sections/DestinationSection/DestinationSection";
+import CrewSection from "../sections/CrewSection/CrewSection";
 import HeroSection from "../sections/HeroSection/HeroSection";
 import TecnologySection from "../sections/TegnologySection/TecnologySection";
-// import { getData } from "../services/getData.js";
+
+// Screens
+import HomeScreen from "../Screens/HomeScreen";
 
 const Router = () => {
   return (

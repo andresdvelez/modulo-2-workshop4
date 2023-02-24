@@ -1,7 +1,8 @@
 @use "../../constants/variables" as v;
 
 .slide-menu {
-  transform: translateX(110vw);
+  //   transform: translateX(110vw);
+  display: none;
   position: absolute;
   overflow: hidden;
 }
